@@ -12,6 +12,11 @@ set output "CRDBvTherm_1key.png"
 plot "dat_1key.csv" using "skews":"ops/sec(cum)" with linespoint title "CockroachDB-POS, n=1 key",\
     "dat_1key_therm.csv" using "skews":"ops/sec(cum)" with linespoint title "Thermopylae, n=1 key"
 
+set title "Throughput v skew, 1 key txns, skewed"
+set output "CRDBvTherm_1key_skewed.png"
+plot "dat_1key_skewed.csv" using "skews":"ops/sec(cum)" with linespoint title "CockroachDB-POS, n=1 key",\
+    "dat_1key_therm_skewed.csv" using "skews":"ops/sec(cum)" with linespoint title "Thermopylae, n=1 key"
+
 #set output ARG3
 #plot ARG1 using "skews":"ops/sec(cum)" with linespoint notitle
 #
